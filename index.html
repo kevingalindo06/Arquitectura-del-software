@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Arquitectura del software</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav id="barra_de_navegacion " class="menu">
+
+
+            <ul>
+                <li class="bar_nav"> <a href="#portada"> Portada</a> </li>
+                <li class="bar_nav"> <a href="#Definicion">Definicion</a> </li>
+                <li class="bar_nav"> <a href="#patron_1">patron 1</a> </li>
+                <li class="bar_nav"> <a href="#patron_2">patron 2</a> </li>
+                <li class="bar_nav"> <a href="#patron_3">patron 3</a> </li>
+                <li class="bar_nav"> <a href="#patron_4">patron 4</a> </li>
+                <li class="bar_nav"> <a href="#patron_5">patron 5</a> </li>
+                <li class="bar_nav"> <a href="#referencias">Referencias</a> </li>
+
+            </ul>
+
+
+
+        </nav>
+
+
+    </header>
+
+    <section id="portada">
+
+        <div class="portada">
+
+            <h2>Actividad 1. Glosario de conceptos de Arqitectura de Sofware</h2>
+            <h3> <span id="kevin"> </span> </h3>
+            <h3> <span id="maria"> </span> </h3>
+            <h3>Facultad de Ingenieria - Ingenieria de software</h3>
+            <h3>Arquitectura de software</h3>
+            <h3>Campo Castillo</h3>
+            <h3>06/03/2023</h3>
+
+        </div>
+
+    </section>
+
+    <section id="Definicion" class="separacion">
+
+        <div id="contenedor">
+
+            <div class="contenido">
+
+                <h3 class="titulo">Patrones de Arquitectura de Software</h3>
+
+                <p>Un patrón arquitectónico es una solución general y que se puede reutilizar en un
+                    problema común en la arquitectura de software dentro de unos parámetros
+                    específicos. Los patrones arquitectónicos son muy similares a los patrones de diseño de
+                    software aunque el alcance es mucho más amplio.
+                </p>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="patron_1" class="separacion">
+
+        <div id="contenedor">
+
+            <div class="imagen">
+                <img src="patron por capas .jpg" alt="">
+            </div>
+
+            <div class="contenido" class="cambiar_color">
+                <h3 class="sub-titulos"> Patrón de capas </h3>
+
+                <p>El patrón de arquitectura en capas es una de las técnicas más comunes utilizadas por los arquitectos
+                    de
+                    software para descomponer sistemas de software complejos.
+                    En este esquema, la capa superior utiliza varios servicios definidos por la capa inferior, pero la
+                    última no es consciente de la capa superior.
+                    Se utilizan en aplicaciones de escritorio, aplicaciones web, comercio electrónico, Aplicaciones
+                    móviles
+                    e híbridas.
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="patron_2" class="separacion">
+
+        <div id="contenedor">
+
+            <div class="imagen">
+                <img src="intermediario.jpg" alt="">
+            </div>
+
+            <div class="contenido">
+
+                <h3 class="sub-titulos"> Patrón de intermediario o del agente</h3>
+
+                <p>Este patrón se usa para estructurar sistemas distribuidos con componentes desacoplados. Estos
+                    componentes pueden interactuar entre sí mediante invocaciones de servicios remotos. Un
+                    componente de intermediario es responsable de la coordinación de la comunicación entre los
+                    componentes
+                    Los servidores publican sus capacidades (servicios y características) a un intermediario. Los
+                    clientes solicitan un servicio del intermediario y el intermediario redirección al cliente a un
+                    servicio adecuado desde su registro.
+                    Uso: Software de Message Broker como Apache ActiveMQ , Apache Kafka , RabbitMQ y JBoss Messaging
+                    .
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="patron_3" class="separacion">
+
+        <div id="contenedor">
+
+            <div class="imagen">
+                <img src="pizarra.jpg" alt="">
+            </div>
+
+            <div class="contenido">
+
+                <h3 class="sub-titulos"> Patrón de pizarra</h3>
+
+                <p> Este patrón es útil para problemas para los que no se conocen estrategias de solución
+                    deterministas.
+                    El patrón de pizarra consta de 3 componentes principales:
+                    - pizarra : una memoria global estructurada que contiene objetos del espacio de solución
+                    - fuente de conocimiento : módulos especializados con su propia representación
+                    - componente de control : selecciona, configura y ejecuta módulos.
+                    Todos los componentes tienen acceso a la pizarra. Los componentes pueden producir nuevos objetos
+                    de
+                    datos que se agregan a la pizarra.
+                    Los componentes buscan tipos particulares de datos en la pizarra, y pueden encontrarlos por
+                    coincidencia
+                    de patrones con la fuente de conocimiento existente.
+                    Uso: Reconocimiento de voz, identificación y seguimiento del vehículo, identificación de la
+                    estructura
+                    proteica.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="patron_4" class="separacion">
+
+        <div id="contenedor">
+
+            <div class="imagen">
+                <img src="maestro_esclavo.jpg" alt="">
+            </div>
+
+            <div class="contenido">
+
+                <h3 class="sub-titulos"> Patrón maestro-esclavo</h3>
+
+                <p> Modo maestro-esclavo Un proceso se considera el "maestro" y los otros procesos se consideran
+                    "esclavos".
+                    El maestro es responsable de asignar tareas a los esclavos y recopilar los resultados de las
+                    tareas.
+                    Por lo tanto, se considera una arquitectura centralizada.
+                    El patrón maestro-esclavo es especialmente útil en sistemas distribuidos porque le permite
+                    distribuir el
+                    trabajo entre varios sistemas para mejorar la escalabilidad y la disponibilidad.
+                    El único inconveniente es que si el proceso central falla, todo el sistema falla.
+                    También se puede utilizar para mejorar el rendimiento de sistemas con múltiples núcleos o
+                    procesadores,
+                    ya que permite que los esclavos procesen tareas en paralelo.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="patron_5" class="separacion">
+
+        <div id="contenedor">
+
+            <div class="imagen">
+                <img src="bus de eventos.jpg" alt="">
+            </div>
+
+            <div class="contenido">
+
+                <h3 class="sub-titulos"> Patrón de bus de evento </h3>
+
+                <p> Este patrón se basa en eventos y sus 4 componentes son: Fuente evento, escucha de evento, canal
+                    y
+                    bus de
+                    evento.
+                    Las fuentes publican mensajes en canales específicos en un bus de eventos.
+                    Las fuentes publican mensajes en canales particulares en un bus de eventos. Los oyentes se
+                    suscriben
+                    a
+                    canales particulares.
+                    Uso: Desarrollos en IOS, desarrollos de Android, algunos servicios de notificación, aplicaciones
+                    de
+                    mensajes, tipo sms.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    </div>
+
+
+
+    <section id="referencias">
+
+        <div class="referencias">
+
+            <div class="contenido">
+
+                <h4 class="sub-titulos">Referencias</h4>
+
+
+                <p>https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FG5Qq5fYPpiY%2Fmaxresdefault.jpg&tbnid=rlikFtRnnhhBMM&vet=12ahUKEwil-ufijZWBAxUASjABHQAnBFwQMygGegQIARBj..i&imgrefurl=https%3A%2F%2Fm.youtube.com%2Fwatch%3Fv%3DG5Qq5fYPpiY&docid=7IWFd_4-viMo7M&w=1280&h=720&q=patr%C3%B3n%20de%20capas%20software&ved=2ahUKEwil-ufijZWBAxUASjABHQAnBFwQMygGegQIARBj
+                </p>
+
+                <p>https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F256293561%2Ffigure%2Ffig2%2FAS%3A392567922413583%401470606894810%2FFigura-3-Arquitectura-maestro-esclavo-MPI.png&tbnid=EpTwuQWeY7iFCM&vet=12ahUKEwjP-ZCPjpWBAxVbK2IAHeKLCgQQMygCegQIARBU..i&imgrefurl=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FFigura-3-Arquitectura-maestro-esclavo-MPI_fig2_256293561&docid=EjvamTv_5PsWpM&w=850&h=647&q=Patr%C3%B3n%20maestro-esclavo&ved=2ahUKEwjP-ZCPjpWBAxVbK2IAHeKLCgQQMygCegQIARBU
+                </p>
+
+                <p>
+                    https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1400%2F1*1qRQZjLRAd0yY_T9p2OgBw.png&tbnid=y9WMfhg7YFg-yM&vet=12ahUKEwia6M_LjpWBAxUKSDABHRwNC58QMygBegQIARBW..i&imgrefurl=https%3A%2F%2Fmedium.com%2F%40maniakhitoccori%2Flos-10-patrones-comunes-de-arquitectura-de-software-d8b9047edf0b&docid=NbAtQZYn7z5g6M&w=704&h=428&q=patr%C3%B3n%20de%20intermediario%20&ved=2ahUKEwia6M_LjpWBAxUKSDABHRwNC58QMygBegQIARBW
+                </p>
+
+                <p>https://gc.scalahed.com/recursos/files/r161r/w25469w/ingdelsoftwarelibro9_compressed.pdf </p>
+                
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="index.js">
+    </script>
+</body>
+
+</html>
