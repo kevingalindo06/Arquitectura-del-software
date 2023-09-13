@@ -30,7 +30,7 @@ nav {
 }
 
 nav ul {
-    margin-top: 5px;
+    margin-top: 20px;
     
 }
 
@@ -42,7 +42,7 @@ nav ul {
 .bar_nav {
     list-style: none;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     transition: .9s;
 
 }
